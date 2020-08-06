@@ -7,4 +7,6 @@ properties([parameters([choice(choices: 'master\ndev\nrelease', description: '',
           echo "pulling the changes from the branch ${params.branch}"
           git url: 'https://github.com/Shankar18294/React-shopping-cart.git' , branch:"${params.branch}"
            }
+      stage('Scm Checkout') {
+         ec2 cloud: 'EC2', template: ''
        }      
