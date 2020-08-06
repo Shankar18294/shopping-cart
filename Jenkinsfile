@@ -9,4 +9,5 @@ properties([parameters([choice(choices: 'master\ndev\nrelease', description: '',
            }
       stage('Scm Checkout') {
          ec2 cloud: 'EC2', template: ''
-       }      
+       }
+   }
